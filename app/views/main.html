@@ -1,0 +1,284 @@
+ <!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">FAQ
+            <small>Subheading</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li class="active">FAQ</li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
+<!-- Marketing Icons Section -->
+<div class="row">
+  <!--<div class="row carousel-holder">
+    <div class="col-md-12">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="item active" ng-click="openRaceInfo(1)">
+                  <img class="slide-image" src="http://placehold.it/1100x300" alt="">
+              </div>
+              <div class="item">
+                  <img class="slide-image" src="http://placehold.it/1100x300" alt="">
+              </div>
+              <div class="item">
+                  <img class="slide-image" src="http://placehold.it/1100x300" alt="">
+              </div>
+          </div>
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+    </div>
+  </div>-->
+  <div class="col-md-9">
+    <div style="height: 305px">
+      <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <!--<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+          <img ng-src="{{slide.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>Slide {{slide.id}}</h4>
+            <p>{{slide.text}}</p>
+          </div>
+        </div>-->
+        <div uib-slide index="0">
+          <img ng-src="http://7818-presscdn-0-76.pagely.netdna-cdn.com/wp-content/uploads/2015/10/sports-car.jpg" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>Slide 0</h4>
+            <p>Text slide</p>
+          </div>
+        </div>
+        <div uib-slide  index="1">
+          <img ng-src="http://7818-presscdn-0-76.pagely.netdna-cdn.com/wp-content/uploads/2015/10/sports-car.jpg" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>Slide 1</h4>
+            <p>Text 1</p>
+          </div>
+        </div>
+        <div uib-slide index="2">
+          <img ng-src="http://7818-presscdn-0-76.pagely.netdna-cdn.com/wp-content/uploads/2015/10/sports-car.jpg" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>Slide 2</h4>
+            <p>Text 2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h4><i class="fa fa-fw fa-check"></i> Últimas opiniones</h4>
+          </div>
+          <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+              <a href="#" class="btn btn-default">Learn More</a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <leaflet lf-center="london" tiles="tiles" id="map-simple-map" width="100%" height="480px"></leaflet>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-9">
+            <h1 class="text-center">
+                No more tables.
+            </h1>
+            <h3 class="text-center">
+                Resize the browser screen to see how the table changes
+            </h3>
+      
+
+        <div id="no-more-tables">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf">
+            <thead class="cf">
+              <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Edition</th>
+                <th>Data</th>
+                <th>Hour</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="p in raceData">
+                <td data-title="Code">{{$index+1}}</td>
+                <td data-title="Name"><a  ng-click="showSelectData(p)" class="pointer">{{p.race_name}}</a></td>
+                <td data-title="Edition">{{p.race_edition}}</td>
+                <td data-title="Data">{{p.race_data}}</td>
+                <td data-title="Hour">{{p.race_start_time}}</td>
+                <td data-title="Location"> <!-- https://maps.google.com/?q=<lat>,<lng> -->
+                  <a href="https://maps.google.com/?q={{p.race_lat}},{{p.race_lng}}" target="_blank">
+                     {{p.race_town}}
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h4><i class="fa fa-fw fa-check"></i> Últimas carreras añadidas</h4>
+          </div>
+          <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+              <a href="#" class="btn btn-default">Learn More</a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+  
+  <div class="col-lg-12">
+      <h1 class="page-header">
+          Welcome to Modern Business
+      </h1>
+  </div>
+
+  <div class="col-md-4">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h4>
+          </div>
+          <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+              <a href="#" class="btn btn-default">Learn More</a>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+          </div>
+          <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+              <a href="#" class="btn btn-default">Learn More</a>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+          </div>
+          <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+              <a href="#" class="btn btn-default">Learn More</a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- /.row -->
+
+<!-- Portfolio Section -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Portfolio Heading</h2>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <a href="portfolio-item.html">
+            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+        </a>
+    </div>
+</div>
+<!-- /.row -->
+
+<!-- Features Section -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Modern Business Features</h2>
+    </div>
+    <div class="col-md-6">
+        <p>The Modern Business template by Start Bootstrap includes:</p>
+        <ul>
+            <li><strong>Bootstrap v3.3.7</strong>
+            </li>
+            <li>jQuery v1.11.1</li>
+            <li>Font Awesome v4.2.0</li>
+            <li>Working PHP contact form with validation</li>
+            <li>Unstyled page elements for easy customization</li>
+            <li>17 HTML pages</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+    </div>
+</div>
+<!-- /.row -->
+
+<hr>
+
+<!-- Call to Action Section -->
+<div class="well">
+    <div class="row">
+        <div class="col-md-8">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+        </div>
+    </div>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="nav nav-tabs">
+          <li role="presentation"  ng-click="showMessage(1)"><a >Home</a></li>
+          <li role="presentation" class="active"><a ng-click="showMessage(2)">Profile</a></li>
+          <li role="presentation"><a ng-click="showMessage(3)">Messages</a></li>
+        </ul>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+<hr>
+
+
+
+
