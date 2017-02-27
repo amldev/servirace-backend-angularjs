@@ -41,7 +41,7 @@ angular
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/start.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
@@ -82,11 +82,11 @@ angular
 .config(['$translateProvider', function ($translateProvider) {
 
     $translateProvider.translations('en', translations_en);
-   
+
     $translateProvider.translations('es', translations_es);
 
     $translateProvider.translations('eu', translations_eu);
- 
+
     $translateProvider.preferredLanguage(window.localStorage.getItem('language'));
     // Enable escaping of HTML
     $translateProvider.useSanitizeValueStrategy('escape');
@@ -97,6 +97,6 @@ angular
     {
       window.localStorage.setItem('language','en');
     }
-    
+
 }])
 ;
