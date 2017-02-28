@@ -27,7 +27,7 @@ angular
 
     var $rootScope = $injector.get('$rootScope');
 
-    $rootScope.isCollapse = [true, true, true, true, true, true];
+    $rootScope.isCollapse = [true, true, true, true, true, true, true, true];
 
     console.info($rootScope.isCollapse[0]);
     console.info(!$rootScope.isCollapse[0]);

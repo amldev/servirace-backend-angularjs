@@ -266,7 +266,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="{{ path('aml_user_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="#/"><i class="fa fa-dashboard fa-fw"></i> Inicio</a>
                         </li>
                         <!--http://fontawesome.io/examples/#navigation-main to rotate arrow icon-->
                         <li>
@@ -281,6 +281,32 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a ng-click="changeMenuSituation(6)"></i><i class="fa fa-child fa-fw"></i> Races <i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[6], 'fa arrow': isCollapse[6]}"></i></a>
+                            <ul uib-collapse="isCollapse[6]" class="nav nav-second-level">
+                                <li>
+                                    <a href="">List</a>
+                                </li>
+                                <li>
+                                    <a href="">Add</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a ng-click="changeMenuSituation(7)"></i><i class="fa fa-youtube-play fa-fw"></i> Videos <i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[7], 'fa arrow': isCollapse[7]}"></i></a>
+                            <ul uib-collapse="isCollapse[7]" class="nav nav-second-level">
+                                <li>
+                                    <a href="">List</a>
+                                </li>
+                                <li>
+                                    <a href="">Add</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+
                         <li>
                             <a ng-click="changeMenuSituation(1)"><i class="fa fa-home fa-fw"></i> Towns<i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[1], 'fa arrow': isCollapse[1]}"></i></a>
                             <ul uib-collapse="isCollapse[1]" class="nav nav-second-level">
@@ -373,7 +399,7 @@
                                     <a href="">Blank Page</a>
                                 </li>
                                 <li>
-                                    <a href="">Login Page</a>
+                                    <a href="#/login">Login Page</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
