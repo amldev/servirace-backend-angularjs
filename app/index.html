@@ -15,7 +15,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
 
-    <link href="styles/font-awesome.min.css" rel="stylesheet">
+    <link href="styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link rel="stylesheet" href="styles/metisMenu.min.css" />
     <!-- Custom CSS -->
@@ -269,7 +269,7 @@
                             <a href="{{ path('aml_user_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(0)"></i><i class="fa fa-user fa-fw"></i> Users <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': !isCollapse[0], 'fa arrow': isCollapse[0]}"></i></a>
+                            <a ng-click="changeMenuSituation(0)"></i><i class="fa fa-user fa-fw"></i> Users <i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[0], 'fa arrow': isCollapse[0]}"></i></a>
                             <ul uib-collapse="isCollapse[0]" class="nav nav-second-level">
                                 <li>
                                     <a href="{{ path('aml_user_index') }}">List</a>
@@ -443,6 +443,7 @@
         <script src="scripts/libs/sb-admin-2.js"></script>
         <script src="scripts/libs/raphael.min.js"></script>
         <script src="scripts/libs/morris.min.js"></script>
+        <script src="scripts/libs/metisMenu.min.js"></script>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
