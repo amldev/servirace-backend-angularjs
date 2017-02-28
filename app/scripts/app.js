@@ -74,7 +74,7 @@ angular
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/start.html',
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
