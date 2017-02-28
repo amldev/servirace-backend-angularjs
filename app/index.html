@@ -268,6 +268,7 @@
                         <li>
                             <a href="{{ path('aml_user_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+                        <!--http://fontawesome.io/examples/#navigation-main to rotate arrow icon-->
                         <li>
                             <a ng-click="changeMenuSituation(0)"></i><i class="fa fa-user fa-fw"></i> Users <i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[0], 'fa arrow': isCollapse[0]}"></i></a>
                             <ul uib-collapse="isCollapse[0]" class="nav nav-second-level">
@@ -281,7 +282,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(1)"><i class="fa fa-home fa-fw"></i> Towns<span class="fa arrow"></span></a>
+                            <a ng-click="changeMenuSituation(1)"><i class="fa fa-home fa-fw"></i> Towns<i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[1], 'fa arrow': isCollapse[1]}"></i></a>
                             <ul uib-collapse="isCollapse[1]" class="nav nav-second-level">
                                 <li>
                                     <a href="">List</a>
@@ -312,7 +313,7 @@
                             <a href=""><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(2)"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <a ng-click="changeMenuSituation(2)"><i class="fa fa-wrench fa-fw"></i> UI Elements<i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[2], 'fa arrow': isCollapse[2]}"></i></a>
                             <ul uib-collapse="isCollapse[2]" class="nav nav-second-level">
                                 <li>
                                     <a href="">Panels and Wells</a>
@@ -336,7 +337,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(3)"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a ng-click="changeMenuSituation(3)"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[3], 'fa arrow': isCollapse[3]}"></i></a>
                             <ul uib-collapse="isCollapse[3]" class="nav nav-second-level">
                                 <li>
                                     <a href="#">Second Level Item</a>
@@ -345,7 +346,7 @@
                                     <a href="#">Second Level Item</a>
                                 </li>
                                 <li>
-                                    <a ng-click="changeMenuSituation(4)">Third Level <span class="fa arrow"></span></a>
+                                    <a ng-click="changeMenuSituation(4)">Third Level <i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[4], 'fa arrow': isCollapse[4]}"></i></a>
                                     <ul uib-collapse="isCollapse[4]" class="nav nav-third-level">
                                         <li>
                                             <a href="#">Third Level Item</a>
@@ -366,7 +367,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(5)"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <a ng-click="changeMenuSituation(5)"><i class="fa fa-files-o fa-fw"></i> Sample Pages<i class="pull-right glyphicon" ng-class="{'fa arrow fa-rotate-270': !isCollapse[5], 'fa arrow': isCollapse[5]}"></i></a>
                             <ul uib-collapse="isCollapse[5]" class="nav nav-second-level">
                                 <li>
                                     <a href="">Blank Page</a>
@@ -386,7 +387,9 @@
 
 
         <!-- /#page-wrapper -->
-        <div ng-view=""></div>
+        <div id="page-wrapper">
+          <div ng-view=""></div>
+        </div>
 
       </div>
 
