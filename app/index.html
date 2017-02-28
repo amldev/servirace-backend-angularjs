@@ -253,7 +253,7 @@
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
+                    <ul class="nav" >
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
@@ -269,8 +269,8 @@
                             <a href="{{ path('aml_user_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Users<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a ng-click="changeMenuSituation(0)"><i class="fa fa-user fa-fw"></i> Users<span class="fa arrow"></span></a>
+                            <ul uib-collapse="isCollapse[0]" class="nav nav-second-level">
                                 <li>
                                     <a href="{{ path('aml_user_index') }}">List</a>
                                 </li>
@@ -281,8 +281,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-home fa-fw"></i> Towns<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a ng-click="changeMenuSituation(1)"><i class="fa fa-home fa-fw"></i> Towns<span class="fa arrow"></span></a>
+                            <ul uib-collapse="isCollapse[1]" class="nav nav-second-level">
                                 <li>
                                     <a href="">List</a>
                                 </li>
@@ -312,8 +312,8 @@
                             <a href=""><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a ng-click="changeMenuSituation(2)"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul uib-collapse="isCollapse[2]" class="nav nav-second-level">
                                 <li>
                                     <a href="">Panels and Wells</a>
                                 </li>
@@ -336,8 +336,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a ng-click="changeMenuSituation(3)"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul uib-collapse="isCollapse[3]" class="nav nav-second-level">
                                 <li>
                                     <a href="#">Second Level Item</a>
                                 </li>
@@ -345,8 +345,8 @@
                                     <a href="#">Second Level Item</a>
                                 </li>
                                 <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
+                                    <a ng-click="changeMenuSituation(4)">Third Level <span class="fa arrow"></span></a>
+                                    <ul uib-collapse="isCollapse[4]" class="nav nav-third-level">
                                         <li>
                                             <a href="#">Third Level Item</a>
                                         </li>
@@ -366,8 +366,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a ng-click="changeMenuSituation(5)"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul uib-collapse="isCollapse[5]" class="nav nav-second-level">
                                 <li>
                                     <a href="">Blank Page</a>
                                 </li>
@@ -451,7 +451,7 @@
         <script src="scripts/libs/jquery.min.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="scripts/libs/metisMenu.min.js"></script>
+        <!--<script src="scripts/libs/metisMenu.min.js"></script>-->
 
         <script src="scripts/app.js"></script>
 
