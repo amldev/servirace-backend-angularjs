@@ -269,7 +269,7 @@
                             <a href="{{ path('aml_user_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a ng-click="changeMenuSituation(0)"><i class="fa fa-user fa-fw"></i> Users<span class="fa arrow"></span></a>
+                            <a ng-click="changeMenuSituation(0)"></i><i class="fa fa-user fa-fw"></i> Users <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': !isCollapse[0], 'fa arrow': isCollapse[0]}"></i></a>
                             <ul uib-collapse="isCollapse[0]" class="nav nav-second-level">
                                 <li>
                                     <a href="{{ path('aml_user_index') }}">List</a>
