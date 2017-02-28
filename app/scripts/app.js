@@ -22,6 +22,16 @@ angular
     'ui.bootstrap',
     'ui-leaflet'
   ])
+.run(function($injector) {
+    console.info('Run function execute!!!');
+
+    var $rootScope = $injector.get('$rootScope');
+
+    $rootScope.test = function()
+    {
+      window.alert('Example to execute inside run to use in mainmenu collapse');
+    };
+})
 
 //Remove UnhandledRejection in qprovider : http://stackoverflow.com/a/40366492/3655781
 .config(['$qProvider', function ($qProvider) {
