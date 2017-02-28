@@ -27,9 +27,19 @@ angular
 
     var $rootScope = $injector.get('$rootScope');
 
+    $rootScope.isCollapse = [false, false, false, false, false];
+
+    console.info($rootScope.isCollapse[0]);
+    console.info(!$rootScope.isCollapse[0]);
+
     $rootScope.test = function()
     {
       window.alert('Example to execute inside run to use in mainmenu collapse');
+    };
+
+    $rootScope.changeMenuSituation = function (index)
+    {
+        $rootScope.isCollapse[index] = $rootScope.isCollapse[index];
     };
 })
 
