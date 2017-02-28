@@ -39,8 +39,20 @@ angular
 
     $rootScope.changeMenuSituation = function (index)
     {
-        $rootScope.isCollapse[index] = !$rootScope.isCollapse[index];
-        console.log($rootScope.isCollapse[index]);
+      $rootScope.isCollapse[index] = !$rootScope.isCollapse[index];
+      console.log($rootScope.isCollapse[index]);
+      if (index !== 4) //New level inside index 3 collapse
+      {
+        for(var i = 0; i < $rootScope.isCollapse.length; i++)
+        {
+          if (index !== i)
+          {
+            console.warn(i);
+            $rootScope.isCollapse[i] = true;
+          }
+        }
+      }
+
     };
 })
 
